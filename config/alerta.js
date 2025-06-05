@@ -1,5 +1,5 @@
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓ AQUI SE CONFIGURA EL TOKEN DEL CANAL DE LAS ALERTAS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓.
-const DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1379453861688774697/JlebMWJhTZrObRaduSPUW84eM-1Kqa2WiWm-b3pGHQRGNXf32Fs87tJ9EeIjcqZ4LuHB';
+const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1380093260999164026/nTCwlG5Rs32tEBhmjWbzCTr1nNWwtNvAp-ZCQAQlZ9xnHdDtsuNndal7ch1XWBeP-dWx';
 
 class DiscordVisitAlerta {
   constructor() {
