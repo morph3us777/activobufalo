@@ -1,0 +1,2 @@
+(function($){"use strict";T4SThemeSP.reviewOther=function(){}})(jQuery_T4NT),jQuery_T4NT(document).ready(function($){jQuery_T4NT("body").on("reloadReview.t4s",T4SThemeSP.reviewOther)});
+//# sourceMappingURL=/cdn/shop/t/4/assets/reviewOther.js.map?v=95403737616239082511698165388

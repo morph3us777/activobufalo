@@ -1,0 +1,2 @@
+console.log("sizesAvailable.js"),setTimeout(function(){for(var filters=document.getElementsByClassName("t4s-filter__values"),i=0;i<filters.length;i++)for(var filter=filters[i],links=filter.getElementsByTagName("a"),j=0;j<links.length;j++){var link=links[j],href=link.getAttribute("href");href.includes("filter.v.option")&&!href.includes("availability")&&(link.href=href.replace("filter.v.option","filter.v.availability=1&filter.v.option")),console.log(href)}},5e3);
+//# sourceMappingURL=/cdn/shop/t/4/assets/sizesAvailable.js.map?v=171018357914274872631698864342
