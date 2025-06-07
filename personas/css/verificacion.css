@@ -1,0 +1,360 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #1d2b67;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      height: auto;
+      background-color: rgb(25, 2, 107);
+      z-index: 1000;
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 160px;
+      margin-top: 10px;
+    }
+
+    /* Contenedor principal rediseñado */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      min-height: calc(100vh - 180px);
+      position: relative;
+    }
+
+    /* Bienvenida al usuario - Estilo mejorado */
+    .user-welcome {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      font-size: 1rem;
+      color: #1d2b67;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(4px);
+      z-index: 10;
+    }
+
+    .welcome-text {
+      color: #64748b;
+      margin-right: 6px;
+      font-weight: 400;
+    }
+
+    .username {
+      font-weight: 600;
+      color: #373efd;
+    }
+
+    .user-icon {
+      margin-right: 10px;
+      color: #373efd;
+      width: 20px;
+      height: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      padding: 40px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: -30px; /* Espacio para la bienvenida */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-header {
+      margin-bottom: 30px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1d2b67;
+      margin-bottom: 10px;
+    }
+
+    .card-subtitle {
+      font-size: 0.95rem;
+      color: #64748b;
+      font-weight: 400;
+    }
+
+    .upload-area {
+      position: relative;
+      margin: 30px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px dashed #e2e8f0;
+    }
+
+    .upload-area:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .upload-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+      color: #373efd;
+    }
+
+    .upload-text {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .file-input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .preview-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #373efd;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background: #2a30c5;
+      box-shadow: 0 5px 15px rgba(55, 62, 253, 0.2);
+    }
+
+    .security-note {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .security-icon {
+      color: #10b981;
+      font-size: 1.2rem;
+      width: 40px;
+    }
+
+    /* Spinner */
+    #spinner {
+      display: none;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .spinner-circle {
+      width: 36px;
+      height: 36px;
+      border: 4px solid rgba(0,0,0,0.1);
+      border-top: 4px solid #373efd;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    #loading-text {
+      display: none;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .modal-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .modal-body {
+      font-size: 1rem;
+      color: #4a5568;
+    }
+
+    .modal-body ul {
+      text-align: left;
+      margin: 1rem auto;
+      padding-left: 1.2rem;
+      list-style: disc;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 1.5rem;
+      color: #94a3b8;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Media Queries para responsividad */
+    @media (max-width: 900px) {
+      .main-container {
+        padding: 30px 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .user-welcome {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 10px;
+        width: calc(100% - 40px);
+        max-width: 500px;
+        align-self: center;
+      }
+
+      .card {
+        margin-top: 0px;
+        padding: 30px 20px;
+        width: 100%;
+      }
+
+      .upload-area {
+        width: 160px;
+        height: 160px;
+      }
+      .upload-text {
+      font-size: 0.65rem;
+      font-weight: bold;
+      color: #64748b;
+    }
+
+      .card-title {
+        font-size: 1.3rem;
+      }
+
+      .card-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .user-welcome {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+
+      .card {
+        padding: 25px 15px;
+      }
+
+      .upload-area {
+        width: 140px;
+        height: 140px;
+      }
+
+      .upload-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .submit-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+      }
+    }
